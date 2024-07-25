@@ -1,26 +1,50 @@
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import {
+  IconHome,
+  IconMessage,
+  IconPaperclip,
+  IconPencil,
+  IconPlant2,
+  IconUser,
+  IconWriting,
+} from "@tabler/icons-react";
 import React from "react";
 import { FloatingNav } from "./ui/floating-navbar";
 
 const Navbar = () => {
   const navItems = [
     {
-      name: "about",
-      link: "/about",
-      icon: <IconUser className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      name: "home",
+      link: "/",
+      icon: (
+        <IconHome className="h-4 w-4 text-dark-mode-primary dark:text-white" />
+      ),
     },
     {
-      name: "personal",
-      link: "/personal",
+      name: "about",
+      link: "/about",
       icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <IconUser className="h-4 w-4 text-dark-mode-primary dark:text-white" />
       ),
     },
     {
       name: "professional",
       link: "/professional",
       icon: (
-        <IconMessage className="h-4 w-4 text-neutral-500 dark:text-white" />
+        <IconPaperclip className="h-4 w-4 text-dark-mode-primary dark:text-white" />
+      ),
+    },
+    {
+      name: "personal",
+      link: "/personal",
+      icon: (
+        <IconPlant2 className="h-4 w-4 text-dark-mode-primary dark:text-white" />
+      ),
+    },
+    {
+      name: "contact",
+      link: "/contact",
+      icon: (
+        <IconMessage className="h-4 w-4 text-dark-mode-primary dark:text-white" />
       ),
     },
   ];

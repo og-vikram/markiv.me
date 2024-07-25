@@ -1,25 +1,17 @@
 "use client";
 import Navbar from "@/components/Navbar";
-import { FloatingNav } from "@/components/ui/floating-navbar";
-import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import Home from "@/pages/Home";
+import { Rosarivo } from "next/font/google";
 import React from "react";
 
-export default function Home() {
+export default function Main() {
   return (
     <>
       <Navbar />
-      <DummyContent />;
+      <Home />
+      <div className="bg-blue w-full h-screen"></div>
+      <div className="bg-red-600 w-full h-screen"></div>
     </>
   );
 }
-
-const DummyContent = () => {
-  return (
-    <div className="grid grid-cols-1 h-[400rem] w-full bg-white  relative border border-neutral-200 dark:border-white/[0.2] rounded-md dark:bg-black-100 ">
-      <p className="dark:text-white text-neutral-600 text-center text-4xl mt-40 font-bold">
-        Scroll back up to reveal Navbar
-      </p>
-      <div className="inset-0 absolute bg-grid-black/[0.1] dark:bg-grid-white/[0.2]" />
-    </div>
-  );
-};
