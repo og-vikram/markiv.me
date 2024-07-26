@@ -48,11 +48,7 @@ const Navbar = () => {
       ),
     },
   ];
-  return (
-    <div className="relative  w-full">
-      <FloatingNav navItems={navItems} />
-    </div>
-  );
+  return <FloatingNav navItems={navItems} />;
 };
 
 export default Navbar;
