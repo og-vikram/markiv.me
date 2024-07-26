@@ -6,6 +6,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ShootingStars from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 
 const garamond = EB_Garamond({
   weight: ["600"],
@@ -63,6 +64,15 @@ const Home = () => {
             who enjoys creating seamless and beautiful user experiences.
           </p>
         </div>
+        {/* <div className=" flex flex-col md:flex-row mt-20">
+          <HoverBorderGradient
+            containerClassName="rounded-full"
+            as="button"
+            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+          >
+            <span>Aceternity UI</span>
+          </HoverBorderGradient>
+        </div> */}
         <IconArrowDown
           style={{
             color: "fuchsia",
@@ -71,7 +81,7 @@ const Home = () => {
         />
       </div>
       <ShootingStars />
-      <StarsBackground />
+      <StarsBackground className="-z-5" />
     </motion.div>
   );
 };

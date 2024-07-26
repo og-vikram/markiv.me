@@ -1,9 +1,10 @@
 "use client";
-// import Navbar from "@/components/Navbar";
-import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
 import Home from "@/pages/Home";
+import Personal from "@/pages/Personal";
+import Professional from "@/pages/Professional";
 import dynamic from "next/dynamic";
-import { Rosarivo } from "next/font/google";
 import React from "react";
 
 export default function Main() {
@@ -13,8 +14,10 @@ export default function Main() {
     <>
       <Navbar />
       <Home />
-      <div className="bg-blue w-full h-screen"></div>
-      <div className="bg-red-600 w-full h-screen"></div>
+      <About />
+      <Professional />
+      <Personal />
+      <Contact />
     </>
   );
 }
