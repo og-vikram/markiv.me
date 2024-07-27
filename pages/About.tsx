@@ -2,8 +2,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="bg-pink-500 w-full h-screen flex items-center justify-center">
-      About
+    <div className={` flex bg-light-mode-primary dark:bg-dark-mode-primary`}>
+      <div className=""></div>
     </div>
   );
 };

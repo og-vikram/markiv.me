@@ -42,8 +42,8 @@ const getRandomStartPoint = () => {
   }
 };
 const ShootingStars: React.FC<ShootingStarsProps> = ({
-  minSpeed = 10,
-  maxSpeed = 30,
+  minSpeed = 5,
+  maxSpeed = 10,
   minDelay = 1200,
   maxDelay = 4200,
   starColor = "#9E00FF",

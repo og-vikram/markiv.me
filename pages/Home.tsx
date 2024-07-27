@@ -21,30 +21,25 @@ const garamond_normal = EB_Garamond({
 });
 
 const words = [
-  {
-    text: "cd",
-    className: "text-dark-mode-primary dark:text-light-mode-primary",
-  },
-  {
-    text: "/home/vikram",
-    className: "text-dark-mode-primary dark:text-light-mode-primary",
-  },
+  "building robust and scalable appplications",
+  "creating seamless and beautiful user interfaces",
 ];
 
 const light_mode_gradient = "bg-gradient-to-r from-indigo-500 to-blue-500";
 const dark_mode_gradient = "";
 const Home = () => {
   return (
+    // <div className="relative">
     <motion.div
       initial={{ opacity: 0.0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       transition={{
-        delay: 0.3,
         duration: 0.8,
         ease: "easeInOut",
       }}
     >
-      <div className="bg-light-mode-primary dark:bg-dark-mode-primary w-screen h-screen flex flex-col justify-center items-center max-h-screen text-dark-mode-primary dark:text-light-mode-primary">
+      <div className="bg-light-mode-primary dark:bg-dark-mode-primary w-screen h-screen flex flex-col justify-center items-center max-h-screen text-dark-mode-primary dark:text-light-mode-primary z-5">
         <div className="text-5xl md:text-6xl lg:text-8xl text-center">
           <p className="text-2xl md:text-4xl lg:text-5xl">
             hello! i&apos;m <br />
@@ -61,18 +56,9 @@ const Home = () => {
             >
               software engineer
             </span>{" "}
-            who enjoys creating seamless and beautiful user experiences.
+            who enjoys creating seamless and beautiful user interfaces.
           </p>
         </div>
-        {/* <div className=" flex flex-col md:flex-row mt-20">
-          <HoverBorderGradient
-            containerClassName="rounded-full"
-            as="button"
-            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
-          >
-            <span>Aceternity UI</span>
-          </HoverBorderGradient>
-        </div> */}
         <IconArrowDown
           style={{
             color: "fuchsia",
@@ -80,9 +66,10 @@ const Home = () => {
           className="h-10 w-10 mt-36 sticky animate-bounce "
         />
       </div>
-      <ShootingStars />
+      <ShootingStars maxSpeed={1} minSpeed={1} trailColor="fuchsia" />
       <StarsBackground className="-z-5" />
     </motion.div>
+    // </div>
   );
 };
 
