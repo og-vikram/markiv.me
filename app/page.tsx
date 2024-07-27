@@ -12,13 +12,15 @@ export default function Main() {
   const Navbar = dynamic(() => import("../components/Navbar"), { ssr: false });
 
   return (
-    <SmoothScroll>
-      <Navbar />
-      <Home />
-      <About />
-      <Professional />
-      <Personal />
-      <Contact />
-    </SmoothScroll>
+    <>
+      <SmoothScroll>
+        <Navbar />
+        <Home />
+        <About />
+        <Professional />
+        <Personal />
+        <Contact />
+      </SmoothScroll>
+    </>
   );
 }

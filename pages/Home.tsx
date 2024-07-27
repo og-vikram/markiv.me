@@ -1,17 +1,22 @@
 "use client";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { IconArrowDown } from "@tabler/icons-react";
-import { EB_Garamond } from "next/font/google";
+import { EB_Garamond, Kalnia } from "next/font/google";
 import React from "react";
 import { motion } from "framer-motion";
 import ShootingStars from "@/components/ui/shooting-stars";
 import { StarsBackground } from "@/components/ui/stars-background";
 import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
+import localFont from "next/font/local";
 
-const garamond = EB_Garamond({
-  weight: ["600"],
-  style: ["italic"],
+const garamond = Kalnia({
+  weight: ["500"],
+  // style: ["italic"],
   subsets: ["latin"],
+});
+
+const classyVogue = localFont({
+  src: "../public/fonts/Classyvogueregular.ttf",
 });
 
 const garamond_normal = EB_Garamond({
@@ -44,26 +49,28 @@ const Home = () => {
           <p className="text-2xl md:text-4xl lg:text-5xl">
             hello! i&apos;m <br />
           </p>
-          <p className="mt-6 bg-gradient-to-r from-fuchsia-500 to-pink-500 inline-block text-transparent bg-clip-text">
-            <span className={garamond.className}>Vikram Sridhar</span>
+          <p className="mt-3 md:mt-6 bg-gradient-to-r from-fuchsia-500 to-pink-500 inline-block text-transparent bg-clip-text text-7xl md:text-8xl">
+            <span className={`tracking-tighter ${classyVogue.className}`}>
+              Vikram Sridhar
+            </span>
           </p>
         </div>
-        <div className="text-xl md:text-xl lg:text-3xl text-pretty text-center w-3/4 mt-12">
+        <div className="text-xl md:text-3xl lg:text-3xl text-pretty text-center w-3/4 mt-12">
           <p>
             i&apos;m a{" "}
             <span
-              className={`bg-gradient-to-r from-fuchsia-500 to-pink-500 inline-block text-transparent bg-clip-text`}
+              className={`bg-gradient-to-r from-fuchsia-500 to-pink-500 inline-block text-transparent bg-clip-text tracking-tighter ${classyVogue.className}`}
             >
               software engineer
             </span>{" "}
-            who enjoys creating seamless and beautiful user interfaces.
+            who enjoys creating seamless and beautiful user experiences.
           </p>
         </div>
         <IconArrowDown
           style={{
             color: "fuchsia",
           }}
-          className="h-10 w-10 mt-36 sticky animate-bounce "
+          className="h-10 w-10 mt-20 md:mt-36 sticky animate-bounce "
         />
       </div>
       <ShootingStars maxSpeed={1} minSpeed={1} trailColor="fuchsia" />

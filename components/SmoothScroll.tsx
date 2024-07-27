@@ -13,6 +13,7 @@ const SmoothScroll = ({
       options={{
         lerp: 0.1,
         syncTouch: true,
+        syncTouchLerp: 0.08,
       }}
     >
       {children}

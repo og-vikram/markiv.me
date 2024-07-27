@@ -23,12 +23,36 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { theme, setTheme } = useTheme();
+  useEffect(() => {
+    console.log(theme);
+  });
   const icon =
     theme === "dark" ? (
       <IconSun className="h-4 w-4 bg-dark-mode-primary" />
     ) : (
       <IconMoon className="h-4 w-4 bg-light-mode-primary" />
     );
+
+  const { scrollYProgress, scrollXProgress } = useScroll();
+
+  const [visible, setVisible] = useState(true);
+
+  useMotionValueEvent(scrollYProgress, "change", (current) => {
+    // Check if current is not undefined and is a number
+    if (typeof current === "number") {
+      let direction = current! - scrollYProgress.getPrevious()!;
+
+      if (scrollYProgress.get() < 0.05) {
+        setVisible(true);
+      } else {
+        if (direction < 0 && scrollXProgress.get() > 0.25) {
+          setVisible(true);
+        } else {
+          setVisible(false);
+        }
+      }
+    }
+  });
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -37,13 +61,13 @@ export const FloatingNav = ({
           y: -100,
         }}
         animate={{
-          //   y: visible ? 0 : -100,
-          y: 0,
-          //   opacity: visible ? 1 : 0,
-          opacity: 1,
+          y: visible ? 0 : -100,
+          // y: 0,
+          opacity: visible ? 1 : 0,
+          // opacity: 1,
         }}
         transition={{
-          duration: 0.8,
+          duration: 0.5,
           ease: "easeInOut",
         }}
         className={cn(

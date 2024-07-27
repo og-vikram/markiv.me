@@ -5,7 +5,7 @@ import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { JetBrains_Mono } from "next/font/google";
 import { useEffect } from "react";
 
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], weight: ["300"] });
 export const TypewriterEffect = ({
   words,
   className,
@@ -89,7 +89,7 @@ export const TypewriterEffect = ({
           repeatType: "reverse",
         }}
         className={cn(
-          "inline-block w-5 max-sm:w-2 h-4 md:h-6 lg:h-10 bg-dark-mode-primary dark:bg-light-mode-primary",
+          "inline-block w-3 h-6 md:w-4 md:h-8 lg:w-5 lg:h-10 bg-dark-mode-primary dark:bg-light-mode-primary",
           cursorClassName
         )}
       ></motion.span>

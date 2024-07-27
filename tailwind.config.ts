@@ -18,12 +18,14 @@ const config: Config = {
       animation: {
         aurora: "aurora 60s linear infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        shimmer: "shimmer 2s linear infinite",
       },
       colors: {
         black: {
           100: "#000319",
         },
-        "light-mode-primary": "#FAF9F6",
+        // "light-mode-primary": "#FAF9F6",
+        "light-mode-primary": "#FFFFF4",
         "dark-mode-primary": "#0A0A0A",
       },
       keyframes: {
@@ -43,6 +45,14 @@ const config: Config = {
           },
           to: {
             backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
+        shimmer: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "-200% 0",
           },
         },
       },
