@@ -27,6 +27,7 @@ const config: Config = {
         // "light-mode-primary": "#FAF9F6",
         "light-mode-primary": "#FFFFF4",
         "dark-mode-primary": "#0A0A0A",
+        "dark-mode-secondary": "#0F0F11",
       },
       keyframes: {
         spotlight: {

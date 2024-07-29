@@ -3,10 +3,12 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import {
   IconBrandGithub,
+  IconBrandGmail,
   IconBrandLinkedin,
   IconBrandSpotify,
   IconBrandTwitter,
   IconBrandX,
+  IconMail,
   IconWritingSign,
 } from "@tabler/icons-react";
 import React from "react";
@@ -60,22 +62,21 @@ const About = () => {
         </GradientButton>
         <GradientButton gradientClassName="bg-[#0077B5]">
           <IconBrandLinkedin className="h-6 w-6 md:h-8 md:w-8 mr-4" />
-          vikram-sridhar1
+          LinkedIn
+        </GradientButton>
+        <GradientButton gradientClassName="bg-[#08851b]">
+          <IconMail className="h-6 w-6 md:h-8 md:w-8 mr-4" />
+          Email
         </GradientButton>
         <GradientButton gradientClassName="bg-[#2b3137]">
           <IconBrandGithub className="h-6 w-6 md:h-8 md:w-8 mr-4" />
-          og-vikram
-        </GradientButton>
-        <GradientButton gradientClassName="bg-[#1DA1F2]">
-          <IconBrandTwitter className="h-6 w-6 md:h-8 md:w-8 mr-4" />
-          ogvikram
+          GitHub
         </GradientButton>
         <GradientButton gradientClassName="bg-[#1DB954]">
           <IconBrandSpotify className="h-6 w-6 md:h-8 md:w-8 mr-4" />
-          ogvikram
+          Spotify
         </GradientButton>
       </div>
-      {/* <TypewriterEffect words={words} className="pt-10" /> */}
     </div>
   );
 };
