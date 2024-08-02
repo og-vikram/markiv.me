@@ -15,13 +15,16 @@ import React from "react";
 
 const words = [
   {
+    text: ">",
+  },
+  {
     text: "cat",
   },
   {
     text: " ",
   },
   {
-    text: "/Users/vikram/about.text",
+    text: "about.text",
     className: "text-dark-mode-primary dark:text-light-mode-primary",
   },
 ];
